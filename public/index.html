@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Quarantine</title>
+</head>
+<body>
+    <h1>Please the following options listed below:</h1>
+    <form method="POST" onsubmit="myFunction()" action="/api/addselect">
+        <h2>How has your quarantine been:</h2>
+        <input type="radio" name= "status" value="Amazing">Amazing
+        <br>
+        <input type="radio" name= "status" value="Good">Good
+        <br>
+        <input type="radio"  name= "status" value="Average">Average
+        <br>
+        <input type="radio"  name= "status" value="Boring">Boring
+        <br>
+        <input type="radio"  name= "status" value="Hate it">Hate it
+        <br>
+        <h2>What have you been doing in your additional time:</h2>
+        <input type="radio" name= "activity" value="New Hobby">New Hobby
+        <br>
+        <input type="radio" name= "activity" value="Gaming">Gaming
+        <br>
+        <input type="radio" name= "activity" value="Cooking">Cooking
+        <br>
+        <input type="radio" name= "activity" value="Netflix">Netflix
+        <br>
+        <input type="radio" name= "activity" value="Sleeping">Sleeping
+        <br>
+        <input type="submit" value="Submit">
+        <input type="Button" onclick="clearRadioButtons();" value="Clear" />
+    </form>
+
+    <script>
+    function clearRadioButtons(){
+        var radioButtonArray1 = document.getElementsByName('status');
+        var radioButtonArray2 = document.getElementsByName('activity');
+
+        for (var i=0; i<radioButtonArray1.length; i++){
+            var radioButton = radioButtonArray1[i];
+            radioButton.checked = false;
+        }
+        for (var i=0; i<radioButtonArray2.length; i++){
+            var radioButton = radioButtonArray2[i];
+            radioButton.checked = false;
+        }
+    }    
+
+    function myFunction() {
+        alert("The form was submitted");
+    }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+    "name": "node-testapp",
+    "version": "0.0.0",
+    "description": "Simple Radio Select application.",
+    "main": "server.js",
+    "author": "Moaiz",
+    "dependencies": {
+        "angular": "^1.6.4",
+        "angular-route": "^1.6.4",
+        "body-parser": "^1.17.2",
+        "express": "^4.15.4",
+        "mongodb": "^3.5.6",
+        "mongoose": "^5.9.10"
+    }
+}
